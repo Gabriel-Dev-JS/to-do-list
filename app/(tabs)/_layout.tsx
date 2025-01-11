@@ -5,6 +5,7 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -17,18 +18,22 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Tarefas',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            // <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={focused ? 'check-square' : 'check-square'} color={color} />
+            // <Feather name="check-square" size={24} color="black" />
           ),
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="cadastrarTarefas"
         options={{
-          title: 'Explore',
+          title: 'Cadastrar Tarefas',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            // <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <TabBarIcon name={focused ? 'list' : 'list'} color={color} />
+            // <Feather name="list" size={24} color="black" />
           ),
         }}
       />
